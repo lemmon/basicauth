@@ -1,0 +1,12 @@
+{
+  "name": "basicauth",
+  "scope": "lemmon",
+  "version": 2,
+  "regions": ["bru"],
+  "builds": [
+    { "src": "app/index.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/.*", "dest": "/app/index.js" }
+  ]
+}
