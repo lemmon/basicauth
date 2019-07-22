@@ -7,7 +7,7 @@ module.exports = (req, res) => {
 
   if (!credentials || credentials.pass !== `${credentials.name}1`) {
     res.writeHead(401, { 'WWW-Authenticate': 'Basic' })
-    res.end('Restricted area. Please login (admin:admin).')
+    res.end('Restricted area.')
   }
 
   const content = fs.readFileSync(path.join(__dirname, 'index.html'))
